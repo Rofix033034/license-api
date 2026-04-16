@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "kleslwr-license-api",
+  "name": "kleslwr",
   "main": "src/index.ts",
   "routes": [
     {
