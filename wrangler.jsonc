@@ -1,0 +1,43 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kleslwr-license-api",
+  "main": "src/index.ts",
+  "routes": [
+    {
+      "pattern": "api.kleslwr.com",
+      "custom_domain": true
+    }
+  ],
+  "compatibility_date": "2026-04-14",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "MAINTENANCE_DEFAULT_MESSAGE": "App is currently under maintenance. Please try again later.",
+    "PROOF_VERSION": "v1",
+    "LEGACY_VERIFY_URL": "https://pay.kleslwr.com/api/internal/legacy/verify"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "SECURITY_COORDINATOR",
+        "class_name": "SecurityCoordinator"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "SecurityCoordinator"
+      ]
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "LICENSE_DB",
+      "database_name": "kleslwr-license-db",
+      "database_id": "a2fa2f29-a0ca-4807-979b-2e17e84e46c0"
+    }
+  ]
+}

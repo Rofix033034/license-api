@@ -1,0 +1,4 @@
+INTERNAL_API_TOKEN=replace_me
+LICENSE_PEPPER=replace_me
+HWID_PEPPER=replace_me
+RESPONSE_PROOF_SECRET=replace_me

@@ -1,0 +1,21 @@
+{
+  "name": "kleslwr-license-api-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply LICENSE_DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply LICENSE_DB --remote"
+  },
+  "dependencies": {
+    "hono": "^4.7.1",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240405.0",
+    "typescript": "^5.4.3",
+    "wrangler": "^3.42.0"
+  }
+}
